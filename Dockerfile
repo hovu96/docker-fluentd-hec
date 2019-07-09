@@ -18,7 +18,7 @@ RUN set -e \
  && gem install -N fluent-plugin-prometheus -v "1.0.1" \
  && gem install -N fluent-plugin-jq -v "0.5.1" \
  && gem install -N specific_install \
- && gem specific_install https://github.com/hovu96/fluent-plugin-splunk-hec.git dev-raw-hec-endpoint \
+ && gem specific_install https://github.com/hovu96/fluent-plugin-splunk-hec.git test \
  && gem install -N oj -v "3.5.1" \
  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
  && wget -O /usr/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_$dpkgArch \
